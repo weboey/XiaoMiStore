@@ -1,0 +1,29 @@
+<div class="head">
+    <div class="container">
+        <div class="head_log">
+            <div ng-include="'view/common/log.html'" class="fl margin_25"></div>
+        </div>
+        <div class="head_title">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="head_login">
+            <div ng-if="user!=null">
+                <div ng-class="'user'"  ng-mouseover="isUserInfo=true" ng-mouseleave="isUserInfo=false">
+                    {{user.name}} <span class="user-icon"></span>
+                    <ul ng-show="isUserInfo" class="user-info">
+                        <li ui-sref="error404">个人中心</li>
+                        <li ui-sref="error404">评价晒单</li>
+                        <li ui-sref="error404">我的喜欢</li>
+                        <li ui-sref="error404">小米账户</li>
+                        <li ng-click="outLogin()">退出登录</li>
+                    </ul>
+                </div>
+                <a href="">我的订单</a>
+            </div>
+            <div ng-if="user==null">
+                <a ui-sref="login" >登录</a>
+                <a ui-sref="register" class="head_register">注册</a>
+            </div>
+        </div>
+    </div>
+</div>

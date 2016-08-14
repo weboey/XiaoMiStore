@@ -1,0 +1,33 @@
+<breadcrumbs class="breadcrumbs"></breadcrumbs>
+<div class="container">
+    <div class="filter_box">
+        <div class="filter_list_wrap clearfix">
+            <goods-filter filter-types="filterTypes" filter-contents="filterContents"></goods-filter>
+        </div>
+    </div>
+</div>
+<div class="search_content">
+    <div class="container">
+        <div class="search_title clearfix">
+            <ul class="search_title_left fl">
+                <li><a href="">推荐</a></li>
+                <li><a href="">新品</a></li>
+                <li><a href="">价格</a></li>
+                <li><a href="">评论最多</a></li>
+            </ul>
+            <ul class="search_title_right fr">
+                <li><a href="">查看评价</a></li>
+                <li><a href="">仅显示特惠商品</a></li>
+                <li><a href="">仅显示有货商品</a></li>
+            </ul>
+        </div>
+        <div class="search_goods_list">
+            <div class="search_goods_item" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+                <div class="actions clearfix">
+                    <a class="btn_like J_likeGoods"><i class="iconfont"></i> <span>喜欢</span></a>
+                    <a class="btn_buy btn-buy-detail J_buyGoods"><span>加入购物车</span> <i class="iconfont"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

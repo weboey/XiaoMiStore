@@ -1,0 +1,61 @@
+<!--<div ng-include="'view/common/header.html'"></div>-->
+<div xm-include src="view/common/header.html" title="我的购物车" user="user"></div>
+<div class="cart_main">
+    <div class="container">
+        <div class="cart-empty" ng-if="!cart.items.length">
+            <h2>您的购物车还是空的！</h2>
+
+            <p ng-if="userUnLogin">登录后将显示您之前加入的商品</p>
+            <button ng-if="user==null" ui-sref="login" class="btn btn-primary-fill">立即登录</button>
+            <button class="btn btn-primary-fill btn_shopping">马上去购物</button>
+        </div>
+
+        <div class="cart-content" ng-if="cart.items.length">
+            <table class="cart-tb cart-product">
+                <thead  class="cart-tb-head">
+                    <tr>
+                        <th class="col-check"><check-box></check-box></th>
+                        <th class="col-img"></th>
+                        <th class="col-name">商品名称</th>
+                        <th class="col-price">单价</th>
+                        <th class="col-num">数量</th>
+                        <th class="col-total">小计</th>
+                        <th class="col-action">操作</th>
+                    </tr>
+                </thead>
+                <tbody class="cart-tb-body">
+                    <tr ng-repeat="productItem in cart.items">
+                        <td>
+                            <div><check-box-item bind-data="productItem"></check-box-item></div>
+                        </td>
+                        <td class="col-img"><img ng-src="resource/img/nav/{{productItem.imgSrc}}.jpg" alt=""/></td>
+                        <td class="col-name">{{productItem.name}}</td>
+                        <td class="dj">{{productItem.price}} 元</td>
+                        <td>
+                            <div class="cart-quantity">
+                                <a class="cart-btn cart-btn-1" ng-click="cart.addNumber(productItem,-1)">-</a>
+                                <input type="text" ng-model="productItem.quantity"/>
+                                <a class="cart-btn cart-btn-2" ng-click="cart.addNumber(productItem,+1)">+</a>
+                            </div>
+                        </td>
+                        <td class="price">{{productItem.quantity*productItem.price}}</td>
+                        <td class="col-action">
+                            <a ng-click="cart.removeItem($index)">X</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cart-total">
+                <span class="cart-total-1">继续购物</span>
+                <span class="cart-total-2">共 <b>{{cart.items.length}}</b> 件商品，已选择 <b>{{cart.getAllSelected()}}</b> 件</span>
+                <span class="cart-total-3">合计（不含运费）：<b>{{cart.getTotalPrice()}}</b></span>
+                <button class="cart-total-4" ui-sref="order" ng-disabled="cart.getAllSelected()===0" ng-class="{'order-btn-disabled':cart.getAllSelected()===0}">去结算</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div ng-include="'view/common/footer.html'"></div>

@@ -1,0 +1,14 @@
+<div class="banner clearfix">
+    <ul class="banner_imgs" id="focusImg">
+        <li ng-repeat="item in imgItems" id="focusLi">
+            <a ui-sref="home.products.detail({productId:item.productId})"><img ng-src="{{item.src}}" alt=""></a>
+        </li>
+    </ul>
+    <div class="banner_number">
+        <a href="#" ng-repeat="item in imgItems" ng-click="btnClk($index)" ng-class="{'on':$index===imgIndex}"></a>
+    </div>
+    <div class="next_prev">
+        <span class="prev" ng-click="changeImg(1)"></span>
+        <span class="next" ng-click="changeImg(-1)"></span>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="ulBox clearfix">
+    <ul>
+        <li ng-repeat="item in ulItems | filter:{isNav:typeSeq}">
+            <ul-box-child-content parent-item="item"
+                                  children-content="childrenContent"
+                                  children-div-class="{{childrenDivClass}}">
+            </ul-box-child-content>
+        </li>
+    </ul>
+</div>
+

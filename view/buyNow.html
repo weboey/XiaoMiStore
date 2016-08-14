@@ -1,0 +1,83 @@
+<!--<div ng-include="'view/common/header.html'"></div>-->
+<div xm-include src="view/common/header.html" user="user"></div>
+<div class="buy_choose_box">
+    <div class="container">
+        <div class="buynow_nav clearfix">
+            <ul>
+                <li><a ui-sref="buyNow({productId:4})" ui-sref-active="active">红米Note3</a></li>
+                <li><a ui-sref="buyNow({productId:6})" ui-sref-active="active">红米手机3</a></li>
+                <li><a ui-sref="buyNow({productId:2})" ui-sref-active="active">小米手机5</a></li>
+                <li><a ui-sref="buyNow({productId:1})" ui-sref-active="active">小米Max</a></li>
+                <li><a ui-sref="buyNow({productId:1})" ui-sref-active="active">小米Note</a></li>
+                <li><a ui-sref="buyNow({productId:3})" ui-sref-active="active">小米手机4c</a></li>
+                <li><a ui-sref="buyNow({productId:3})" ui-sref-active="active">小米手机4</a></li>
+                <li><a ui-sref="#">对比手机</a></li>
+            </ul>
+        </div>
+        <div class="buynow_bd" id="buyNow_bd">
+            <div class="phone_img fl">
+                <img ng-if="!userSelectArr[1]" src="resource/img/buyNow/{{buyProduct.img}}.jpg" alt=""/>
+                <img ng-if="userSelectArr[1]" src="resource/img/buyNow/{{buyProduct.img}}-{{userSelectArr[1].img}}.jpg"
+                     alt=""/>
+            </div>
+            <div class="phone_info fr" >
+                <div class="title_step">
+                    <span class="pro_title">购买{{buyProduct.name}} </span>
+                    <span class="pro_price">{{buyProduct.price}}元起</span>
+                    <a href="">深入了解本产品&gt;</a>
+
+                    <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+                </div>
+                <div class="banben_step">
+                    <p>1.选择版本 <span>{{userSelectArr[0].description}}</span></p>
+                    <ul class="step-list clearfix J_stepList">
+                        <li ng-repeat="versionItem in buyProductVersions" class="J_stepItem"
+                            ng-click="pushUserSelectVersion(versionItem)"
+                            ng-class="{'J_stepItem_active':setClassActive(versionItem,1)}">
+                            {{versionItem.name}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="color_step" >
+                    <p>2. 选择颜色</p>
+                    <ul class="step-list clearfix J_stepList">
+                        <li ng-repeat="colorItem in buyProductColors" class="J_stepItem"
+                            ng-click="pushUserSelectColor(colorItem)"
+                            ng-class="{'J_stepItem_active':setClassActive(colorItem,2)}">
+                            {{colorItem.name}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="next_step">
+                    <p>您选择了以下产品</p>
+                <span>{{buyProduct.name}}
+                    <p ng-repeat="userSelectItem in userSelectArr">{{userSelectItem.name}}</p>
+                </span>
+                    <button ng-if="userSelectArr.length!=2" ng-click="buyNextStep(buyProduct)" title=""  class="btn btn-group-lg">下一步</button>
+                    <button ng-if="userSelectArr.length==2" ng-click="buyNextStep(buyProduct)" title=""  class="btn btn-group-lg btn-primary">立即购买</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- buy-choose-box END -->
+<hr/>
+<div class="container">
+    <div class="pro-detail-box">
+        <div class="section section-image is-visible">
+            <a href="#"><img src="resource/img/mi5/mi5-shenruliaojie.jpg"></a>
+        </div>
+    </div>
+</div>
+
+<!--top bar-->
+<div class="header_bar" id="J_headerBar" ng-class="{'header_bar_active':offsetY>=800}">
+    <div class="container">
+        <span class="pro-desc" id="J_headerBarDesc">
+            {{buyProduct.name}}
+            <span ng-repeat="userSelectItem in userSelectArr">{{userSelectItem.name}} </span>
+            {{buyProduct.price}}元
+        </span>
+        <a ng-click="goToDivId('buyNow_bd')" class="btn btn-primary">立即购买</a>
+    </div>
+</div>

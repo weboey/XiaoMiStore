@@ -1,0 +1,58 @@
+
+/*content*/
+/*leftAraa*/
+.home_content{
+    margin-top: 1px;
+    width: 100%;
+}
+.content_left{
+    width: 234px;
+    background: rgba(0,0,0,0.6);
+    font-size: 14px;
+    position: relative;
+}
+
+
+/*½¹µãÍ¼ÑùÊ½*/
+.rightFocusImg {
+    height: 460px;
+    width: 992px;
+    position: relative;
+    overflow: hidden;
+}
+
+.error-404{
+    width: 100%;
+    min-height: 650px;
+    background: url("../../resource/img/404.jpg") 85% 0 no-repeat;
+    position: relative;
+}
+.error-content{
+    position: absolute;
+    width: 350px;
+    margin: auto;
+    left: 35%;
+    top:52%;
+}
+.error-content h1{
+    position: absolute;
+    left: 27%;
+    top:-65%;
+    font-size: 66px;
+    color: #ff6700;
+    font-family: 'Fb76cc';
+}
+.error-content h2{
+    margin: 10px 0;
+}
+.error-content h4{
+    margin: 10px 0;
+    color: #c3c3c3;
+}
+.error-content button{
+    border: 1px solid #ff6700;
+    height: 40px;
+    width: 120px;
+    margin: 15px 50px 0 0;
+    border-radius: 15px;
+}

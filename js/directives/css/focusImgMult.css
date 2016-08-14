@@ -1,0 +1,97 @@
+.xm-plain-box{
+
+}
+
+.box-hd{
+    position: relative;
+}
+.box-hd h1{
+    margin: 0;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 58px;
+    color: #333;
+}
+.more{
+    position: absolute;
+    top:20px;
+    right: 0;
+}
+.more button{
+    width: 34px;
+    height: 22px;
+    padding: 3px 5px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 16px;
+}
+.more button:first-child{
+    margin-right: -5px;
+}
+/*利用CSS画按钮的背景三角形*/
+.more button:first-child span{
+    border:solid transparent;
+    border-right-color: #8b8b8b;
+    border-width:7px;
+    content:" ";
+    position:absolute;
+    left:5%;
+    top:4px;    /*20px*/
+}
+.more button:last-child span{
+    border:solid transparent;
+    border-left-color: #8b8b8b;
+    border-width:7px;
+    content:" ";
+    position:absolute;
+    left:71%;
+    top:4px;    /*20px*/
+}
+/*鼠标悬浮在按钮上*/
+.more button:first-child:hover span{
+    border-right-color: #ff6700;
+}
+.more button:last-child:hover span{
+    border-left-color: #ff6700;
+}
+/*按钮不可用*/
+.disabled-left{
+    border-left-color: #d5d5d5 !important;
+}
+.disabled-right{
+    border-right-color: #d5d5d5 !important;
+}
+/*.more button:first-child{
+    background: url("../../../resource/img/icon/icon-slides.png") -86px -25px no-repeat;
+}
+.more button:last-child{
+    background: url("../../../resource/img/icon/icon-slides.png") -131px -25px no-repeat;
+}
+.more button:hover{
+    color: #ff6700;
+}*/
+.box-bd{
+    width:1226px;
+    height: 300px;
+    position: relative;
+    overflow:hidden;
+
+}
+.box-bd ul{
+    position: absolute;
+    left: 0;
+}
+.box-bd ul li{
+    width: 233px;
+    margin-right:15px;
+    float: left;
+    padding-top: 39px;
+    border-top: 1px solid #ff6700;
+    height: 300px;
+    text-align: center;
+    transition: all .6s;
+}
+.box-bd ul li img{
+    width: 160px;
+    height: 160px;
+}

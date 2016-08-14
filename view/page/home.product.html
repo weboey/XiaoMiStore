@@ -1,0 +1,21 @@
+<div class="product_hd" ng-class="{'product_hd_fixed':isFlag}">
+    <div class="container">
+        <div class="product_title fl">
+            <h1>{{product.name}}</h1>
+        </div>
+        <div class="product_buy fr">
+            <a ui-sref="buyNow({productId:product.productId})" class="btn btn-primary">立即购买</a>
+        </div>
+        <div class="product_nav fr">
+            <ul>
+                <li ng-repeat="navItem in product.details">
+                    <a ui-sref="home.products.detail({detailType:navItem.name})"
+                            ui-sref-active="active">{{navItem.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- product detail info-->
+<div ui-view></div>

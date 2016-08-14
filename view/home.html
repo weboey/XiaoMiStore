@@ -1,0 +1,44 @@
+<!--头部工具栏-->
+<div class="topbar">
+    <div class="container">
+        <div class="topbar_nav fl">
+            <ul>
+                <li><a ui-sref="home.main">小米网</a></li>
+                <li><a ui-sref="error404">MIUI</a></li>
+                <li><a ui-sref="error404">米聊</a></li>
+                <li><a ui-sref="error404">游戏</a></li>
+                <li><a ui-sref="error404">多看阅读</a></li>
+                <li><a ui-sref="error404">云服务</a></li>
+                <li><a ui-sref="error404">小米网移动版</a></li>
+                <li><a ui-sref="error404">问题反馈</a></li>
+                <li><a ui-sref="error404">Select Region</a></li>
+            </ul>
+        </div>
+        <div class="topbar_cart fr">
+            <a ui-sref="cart">购物车</a>
+        </div>
+        <div class="topbar_info fr">
+            <div ui-view="loginUser"></div>
+
+        </div>
+    </div>
+</div>
+
+<!--头部导航菜单-->
+<div class="site_head">
+    <div class="container">
+        <div ng-include="'view/common/log.html'" class="fl margin_25"></div>
+        <div class="site_head_nav fl">
+            <ul-box ul-items="ulItems" ul-type="nav" children-content="ulItemsContent" children-div-class="children_horizontal"></ul-box>
+        </div>
+        <div class="site_head_search fr margin_25">
+            <xm-search></xm-search>
+        </div>
+    </div>
+</div>
+
+<!-- home.main-->
+<div ui-view></div>
+
+<!--footer-->
+<div ng-include="'view/common/footer.html'"></div>

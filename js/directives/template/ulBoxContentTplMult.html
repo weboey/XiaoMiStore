@@ -1,0 +1,26 @@
+<div ng-mouseenter="showContent()" ng-mouseleave="closeContent()">
+    <a class="wai_a" href="#">{{parentItem.text}}</a>
+
+    <div  ng-if="ContentArray.length" ng-switch="childrenDivClass==='children_horizontal'"
+         class="{{childrenDivClass}}" ng-class="setClass()" ng-show="flag">
+        <ul ng-switch-when="false" ng-repeat="pageN in pageList"  class="children_list clearfix">
+            <!-- <li ng-repeat="childrenItem in childrenItems |filt| myFilter:parentItem.idr: {fl_id: item.id}">-->
+            <li  ng-repeat="childrenItem in ContentArray | myFilter2:pageN">
+                <a ui-sref="home.products.detail({productId:childrenItem.productId})" ng-click="closeContent()">
+                    <img ng-src="resource/img/nav/{{childrenItem.img}}.jpg" alt="" />
+                    <p>{{childrenItem.name}}</p>
+                </a>
+            </li>
+        </ul>
+        <ul ng-switch-when="true" class="children_list clearfix">
+            <!-- <li ng-repeat="childrenItem in childrenItems |filt| myFilter:parentItem.idr: {fl_id: item.id}">-->
+            <li ng-class="{'first':$first}" ng-repeat="childrenItem in childrenContent | myFilter:parentItem.id | limitTo:6">
+                <a ui-sref="home.products({productId:childrenItem.productId})" ng-click="closeContent()">
+                    <img ng-src="resource/img/nav/{{childrenItem.img}}.jpg" alt="" />
+                    <p>{{childrenItem.name}}</p>
+                    <p ng-if="childrenDivClass=='children_horizontal'" class="price">{{childrenItem.price}}元起</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

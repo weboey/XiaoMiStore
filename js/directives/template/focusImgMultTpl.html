@@ -1,0 +1,17 @@
+<div class="xm-plain-box">
+    <div class="box-hd">
+        <h1>{{title}}</h1>
+        <div class="more">
+           <!--<button ng-repeat="item in btnNmber" ng-click="btnClk($index)" ng-class="{'disabled':imgIndex<=0}" ng-disabled="imgIndex<=0">1{{item}}</button>-->
+            <button ng-click="changeImg(-1)"  ng-disabled="imgIndex<=0"><span ng-class="{'disabled-right':imgIndex<=0}"></span></button>
+            <button ng-click="changeImg(1)"  ng-disabled="imgIndex>=imgTotalPage"><span ng-class="{'disabled-left':imgIndex>=imgTotalPage}"></span></button>
+        </div>
+    </div>
+    <div class="box-bd">
+        <ul id="focusImg">
+            <li ng-repeat="item in imgItems" id="focusLi">
+                <a ui-sref="error404"><img ng-src="resource/img/index/{{item.imgName}}.jpg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+</div>

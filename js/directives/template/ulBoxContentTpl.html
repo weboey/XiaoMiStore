@@ -1,0 +1,42 @@
+<div ng-mouseenter="showContent()" ng-mouseleave="closeContent()">
+    <a class="wai_a" href="#">{{parentItem.text}}</a>
+
+    <div ng-if="childrenContent.length" class="{{childrenDivClass}}" ng-show="flag">
+        <ul class="children_list clearfix">
+            <!-- <li ng-repeat="childrenItem in childrenItems |filt| myFilter:parentItem.idr: {fl_id: item.id}">-->
+            <li ng-class="{'first':$first}" ng-repeat="childrenItem in childrenContent | myFilter:parentItem.id">
+                <a ui-sref="home.products({productId:childrenItem.id})" ng-click="closeContent()">
+                    <img ng-src="resource/img/nav/{{childrenItem.img}}.jpg" alt="" />
+                    <p>{{childrenItem.name}}</p>
+                    <p ng-if="childrenDivClass=='children_horizontal'" class="price">{{childrenItem.price}}元起</p>
+                </a>
+            </li>
+        </ul>
+
+        <!--
+            <div style="overflow: auto">
+        <ul>
+            <li ng-repeat="item in ulList|filter: {isNav: typeSeq}">
+                <div my-ul-box-item item="item" children-items="childrenItems"
+                     chirld-div-class="{{chirldDivClass}}"></div>
+            </li>
+        </ul>
+    </div>
+
+        <div>
+            <a href="">{{parentItem.text}}</a>
+
+            <div ng-show="true" class="children_content">
+                <div class="container">
+                    <ul class="children_list clearfix">
+                        <li ng-repeat="childrenItem in childrenContent">
+                            <img src="resource/img/nav/{{childrenItem.img}}.jpg" alt="" style="width: 160px;height: 110px"/>
+                            <p>{{childrenItem.name}}</p>
+                            <span class="price">{{childrenItem.price}}元起</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>

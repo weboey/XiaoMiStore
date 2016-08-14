@@ -1,0 +1,140 @@
+.btn-primary-fill {
+    background: #ff6700;
+    border-color: #ff6700;
+    color: #fff;
+}
+
+.btn-primary:hover{
+    background-color: #ff6700;
+    border-color: #ff6700;
+}
+
+.btn {
+    display: inline-block;
+    width: 158px;
+    height: 38px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #b0b0b0;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    color: #b0b0b0;
+    cursor: pointer;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+/*.btn-primary {
+    border-color: #ff6700;
+    background-color: #fff;
+    color: #ff6700;
+}*/
+.btn-primary {
+    background: #ff6700;
+    border-color: #ff6700;
+    color: #fff;
+}
+/*header*/
+.head {
+    font-size: 12px;
+    height: 102px;
+    border-bottom: 2px solid #ff6700;
+    background: #fff;
+    color: #b0b0b0;
+}
+.head_log{
+    margin-right: 55px;
+}
+.head_log img{
+    width: 48px;
+    height: 48px;
+}
+.head_title {
+    float: left;
+    margin: 26px 0 0 0;
+}
+.head_title h1{
+    color: #424242;
+    font-size: 28px;
+    height: 48px;
+    line-height: 48px;
+}
+.head_login{
+    float: right;
+    margin: 26px 0 0 0;
+    line-height: 48px;
+}
+.head_register{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+
+/***** footer */
+.footer{
+
+}
+/*footer  footer_service*/
+.footer_service{
+    padding: 30px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+.footer_service ul{
+    margin-right: -2px;
+}
+.footer_service ul li{
+    float: left;
+    width: 20%;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+    border-right: 1px solid #e0e0e0;
+    text-align: center;
+    padding-right: 60px;
+}
+.footer_service ul li a{
+
+
+}
+
+/*footer  footer_link*/
+.footer_link{
+    padding: 40px 0;
+}
+.footer_link dl{
+    float: left;
+    width: 150px;
+    height: 112px;
+    margin: 0;
+}
+.footer_link dt{
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+.footer_link dd{
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+
+.footer_contact{
+    float: right;
+    width: 230px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+.footer_contact .phone{
+    font-size: 26px;
+    color: #ff6700;
+}
+
+.footer_site{
+    background: #f5f5f5;
+}
+.footer_site p{
+    margin: 32px 0;
+}

@@ -1,0 +1,146 @@
+/*购买结算页样式文件*/
+.buy_choose_box{
+    margin: 0 0 110px;
+}
+/*固定的工具条：立即购买*/
+.header_bar{
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #dfdfdf;
+    background-color: rgba(255,255,255,0.8);
+    text-align: right;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.header_bar_active {
+    top: 0;
+}
+.header_bar .container {
+    padding: 15px 0;
+    color: #333;
+}
+.header_bar .btn{
+    margin-left: 20px;
+}
+/* 头部导航 */
+.buynow_nav{
+    padding: 10px 0;
+}
+.buynow_nav ul li{
+    width: 12.5%;
+    float: left;
+    height: 77px;
+    line-height: 76px;
+    margin: 0 0 -1px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+.buynow_nav ul li a{
+    display: block;
+    color: #333;
+    outline: none;
+    border-bottom: 1px solid #dfdfdf;
+}
+.buynow_nav .active {
+    border-bottom-color: #333;
+}
+/*左边手机图片信息*/
+.phone_img{
+    width: 50%;
+    height: 600px;
+    float: left;
+    _display: inline;
+    margin: 50px 0 0 0px;
+    overflow: auto;
+}
+/*右边手机信息*/
+.phone_info{
+    width: 45%;
+    margin: 50px 0 0 55px;
+
+}
+/*右边手机信息 ： tiile */
+.title_step{
+    height: 60px;
+    margin-bottom: 55px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.pro_title{
+    margin: 0;
+    font-size: 30px;
+    line-height: 56px;
+    font-weight: normal;
+}
+.pro_price{
+    margin-left: 10px;
+    font-size: 28px;
+    color: #ff6700;
+}
+.title_step p{
+    margin-top: 20px;
+    color: red;
+}
+.title_step a{
+    display: block;
+    float: right;
+    font-size: 10px;
+    margin: 30px 10px 0 0;
+}
+/*右边手机信息 ： 1,选择版本 */
+.J_stepList{
+
+}
+.J_stepItem{
+    float: left;
+    width: 47%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 1px 16px 15px 0px;
+    border: 1px solid #e3e3e3;
+}
+.J_stepItem_active{
+    border-color: #ff6700;
+}
+.J_stepItem button:focus,.next_step button:focus{
+    outline: 1px solid red;
+}
+.banben_step p,.color_step p{
+    font-size: 18px;
+}
+.banben_step span{
+    display: inline-block;
+    margin-left: 12px;
+    min-height: 20px;
+    line-height: 1.5;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+/*右边手机信息 ： 2,选择颜色 */
+.color_step{
+
+}
+/*右边手机信息 ： 3,结算下一步 */
+.next_step span{
+    color: #9b9b9b;
+    display: block;
+    font-size: 10px;
+}
+.next_step .btn{
+    margin: 30px 0;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    color: #9b9b9b;
+    width: 178px;
+    height: 48px;
+}
+.next_step .btn-primary{
+    background: #ff6700;
+    border-color: #ff6700;
+    color: #fff;
+}

@@ -1,0 +1,128 @@
+/*head site_head site_head_nav*/
+.headBox{height: 100px;position: relative;}
+.logo{float: left;width: 62px;margin: 22px 100px 0 10px;}
+.ulBox{}
+.site_head_nav .ulBox li{float: left;}
+.site_head_nav .ulBox ul:first-child{line-height: 100px;}
+.site_head_nav .ulBox li a{font-size: 16px;}
+
+.site_head_nav .ulBox li div{padding: 0 20px;}
+
+
+.price{line-height: 20px;color: #ff6700;}
+.site_head_nav .children_list li a:hover{color: #000;}
+/*清除第一个li 后面显示一条分割线*/
+.site_head_nav .children_list .first:before {display: none;}
+/*li 后面显示一条分割线*/
+.site_head_nav .children_list li:before{  position: absolute;  left: 0;  top: 35px;  z-index: 1;  width: 1px;  height: 100px;  content: "";  background-color: #e0e0e0;  }
+
+.site_head_nav .ulBox li a:hover{
+    text-decoration:none;
+    color: #ff7010;
+}
+/*ul box 第二层*/
+/*ul box 第二层 整个div */
+/* 导航栏鼠标进入时要显示的div样式 */
+/*.content_left .ulBox ul:first-child{
+height: 420px;
+border: 0;
+color: #fff;
+background: rgba(0,0,0,0.6);
+margin: 0;
+list-style-type: none;
+border: 1px solid #ff6700;
+}*/
+
+.children {
+    display: block;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 24;
+    height: 460px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+    /*-webkit-box-shadow: 0 8px 16px rgba(0,0,0,0.18);*/
+    /*box-shadow: 0 8px 16px rgba(0,0,0,0.18);*/
+}
+.content_left .ulBox{
+    height: 460px;
+    font-size: 14px;
+    padding: 20px 0;
+}
+.content_left .ulBox a{color: #fff;}
+.children .children_list{float: left;width: 265px;}
+.content_left .wai_a{
+    width: 234px;
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+}
+.content_left .wai_a:hover{
+    text-decoration:none;
+    background-color: #ff6700;
+    color: #fff;
+}
+.children .children_list li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+.children .children_list li a{
+     display: block;
+     padding: 18px 20px;
+     line-height: 40px;
+     color: #333;
+     -webkit-transition: color .2s;
+     transition: color .2s;
+ }
+.children .children_list li a:hover{  color: #ff6700;  cursor: pointer}
+.children .children_list li p{display: inline-block;line-height: 20px;font-size: 12px;margin: 5px 0 0 0;}
+.class-col-1{width: 265px;}
+.class-col-2{width: 531px;}
+.class-col-3{width: 796px;}
+
+
+.children img{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/*.content_left a:hover{
+    text-decoration:none;
+    background-color: #ff6700;
+    color: #fff;
+}*/
+/* 导航栏鼠标进入时要显示的div样式 水平方向 width:100% */
+.children_horizontal {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 24;
+    width: 100%;
+    height: 229px;
+    border-top: 1px solid #e0e0e0;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.11);
+    transition: box-shadow .2s;
+}
+.children_horizontal p{
+    line-height: 20px !important;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    text-align: center;
+}
+.children_horizontal .children_list li{
+    position: relative;
+    float: left;
+    padding: 35px 12px 0;
+    width: 16.66%;
+    height: 76px;
+    text-align: center;
+}

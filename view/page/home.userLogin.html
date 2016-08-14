@@ -1,0 +1,19 @@
+<div>
+    <div ng-if="user!=null">
+        <div ng-class="'user'"  ng-mouseover="isUserInfo=true" ng-mouseleave="isUserInfo=false">
+            {{user.name}} <span class="user-icon"></span>
+            <ul ng-show="isUserInfo" class="user-info">
+                <li ui-sref="error404">个人中心</li>
+                <li ui-sref="error404">评价晒单</li>
+                <li ui-sref="error404">我的喜欢</li>
+                <li ui-sref="error404">小米账户</li>
+                <li ng-click="outLogin()">退出登录</li>
+            </ul>
+        </div>
+        <a ui-sref="order">我的订单</a>
+    </div>
+    <div ng-if="user==null">
+        <a ui-sref="login">登录</a>
+        <a ui-sref="register">注册</a>
+    </div>
+</div>

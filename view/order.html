@@ -1,0 +1,57 @@
+<!-- header -->
+<!--<div ng-include="'view/common/header.html'"></div>-->
+<div xm-include src="view/common/header.html" title="确认订单" user="user"></div>
+<!-- content -->
+<div class="order-bd">
+    <div class="container">
+        <div class="order-content">
+            <div class="tr">
+                <h2>收货地址</h2>
+                <input class="item_account" autocomplete="off" type="text"
+                       placeholder="请填写您的收货地址">
+            </div>
+            <div class="tr">
+                <h2>支付方式</h2>
+                <span>在线支付 （支持支付宝、银联、财付通、小米支付等）</span>
+            </div>
+            <div class="tr">
+                <h2>配送时间</h2>
+                <div class="pay-time pay-btn">
+                    <a>不限送货时间：周一至周日</a>
+                    <a>工作日送货：周一至周五</a>
+                    <a>双休日、假日送货：周六至周日</a>
+                </div>
+            </div>
+            <div class="tr">
+                <h2>配送方式</h2>
+               <span>快递配送（免运费）</span>
+            </div>
+            <div class="tr">
+                <h2>发票</h2>
+                <div class="pay-invoice pay-btn">
+                    <a>电子发票（非纸质）</a>
+                    <a>普通发票（纸质）</a>
+                </div>
+            </div>
+
+            <div class="pay-total clearfix">
+                <ul>
+                    <li><span>商品件数：</span><i>{{cart.getAllSelected()}}件</i></li>
+                    <li><span>金额合计：</span><i>{{cart.getTotalPrice()}}元</i></li>
+                    <li><span>活动优惠：</span><i>-0元</i></li>
+                    <li><span>优惠券抵扣：</span><i>-0元</i></li>
+                    <li><span>运费：</span><i>-0元</i></li>
+                    <li class="pay-num"><span>应付总额：</span><i>{{cart.getTotalPrice()}}元</i></li>
+                </ul>
+            </div>
+
+            <div class="pay-next clearfix">
+                <button class="pay-fk">去付款</button>
+                <button class="pay-back" ui-sref="cart">返回购物车 》</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div ng-include="'view/common/footer.html'"></div>

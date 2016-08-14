@@ -1,0 +1,39 @@
+<div class="login_page">
+    <div  class="login icon container">
+        <h1>注册小米帐号</h1>
+        <div class="login_form">
+            <form action="">
+                <div class="tr">
+                    <input class="item_account" autocomplete="off" type="text" ng-model="userRegister.name"
+                           placeholder="请输入手机号码/邮箱帐号">
+                </div>
+                <div class="tr">
+                    <input class="item_account" autocomplete="off" type="password" ng-model="userRegister.pwd"
+                           placeholder="请输入密码">
+
+                </div>
+                <div class="tr">
+                    <input id="code1" class="code" type="text" placeholder="图片验证码">
+                    <div id="vCode1" class="icode_image"></div>
+                  <!--  <img alt="图片验证码" title="看不清换一张" ng-click="creatCode(4)" class="icode_image code-img" src="#">-->
+                </div>
+                <div class="tr">
+                    <input id="btn1" type="button" ng-click="subRegister()" value="立即注册"/>
+                </div>
+                <p class="xiey">点击“立即注册”，即表示您同意并愿意遵守小米
+                    <a href="">用户协议</a> 和 <a href="">隐私政策</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="login_footer clearfix">
+        <ul>
+            <li><a href="">简体</a></li>
+            <li><a href="">繁体</a></li>
+            <li><a href="">English</a></li>
+            <li><a href="">常见问题</a></li>
+        </ul>
+        <p class="icp">小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+    </div>
+</div>
