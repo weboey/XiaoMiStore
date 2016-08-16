@@ -1,7 +1,4 @@
-.xm-plain-box{
-
-}
-
+/**/
 .box-hd{
     position: relative;
 }
@@ -28,7 +25,7 @@
 .more button:first-child{
     margin-right: -5px;
 }
-/*ÀûÓÃCSS»­°´Å¥µÄ±³¾°Èı½ÇĞÎ*/
+/*åˆ©ç”¨CSSç”»æŒ‰é’®çš„èƒŒæ™¯ä¸‰è§’å½¢*/
 .more button:first-child span{
     border:solid transparent;
     border-right-color: #8b8b8b;
@@ -47,14 +44,14 @@
     left:71%;
     top:4px;    /*20px*/
 }
-/*Êó±êĞü¸¡ÔÚ°´Å¥ÉÏ*/
+/*é¼ æ ‡æ‚¬æµ®åœ¨æŒ‰é’®ä¸Š*/
 .more button:first-child:hover span{
     border-right-color: #ff6700;
 }
 .more button:last-child:hover span{
     border-left-color: #ff6700;
 }
-/*°´Å¥²»¿ÉÓÃ*/
+/*æŒ‰é’®ä¸å¯ç”¨*/
 .disabled-left{
     border-left-color: #d5d5d5 !important;
 }

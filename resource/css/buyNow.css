@@ -1,8 +1,8 @@
-/*¹ºÂò½áËãÒ³ÑùÊ½ÎÄ¼ş*/
+/*è´­ä¹°ç»“ç®—é¡µæ ·å¼*/
 .buy_choose_box{
     margin: 0 0 110px;
 }
-/*¹Ì¶¨µÄ¹¤¾ßÌõ£ºÁ¢¼´¹ºÂò*/
+/*å›ºå®šçš„å·¥å…·æ¡ï¼šç«‹å³è´­ä¹° start*/
 .header_bar{
     position: fixed;
     top: -100px;
@@ -25,7 +25,9 @@
 .header_bar .btn{
     margin-left: 20px;
 }
-/* Í·²¿µ¼º½ */
+/*å›ºå®šçš„å·¥å…·æ¡ï¼šç«‹å³è´­ä¹° end*/
+
+/* å¤´éƒ¨å¯¼èˆªèœå• start*/
 .buynow_nav{
     padding: 10px 0;
 }
@@ -49,7 +51,7 @@
 .buynow_nav .active {
     border-bottom-color: #333;
 }
-/*×ó±ßÊÖ»úÍ¼Æ¬ĞÅÏ¢*/
+/*å·¦è¾¹æ‰‹æœºå›¾ç‰‡ä¿¡æ¯*/
 .phone_img{
     width: 50%;
     height: 600px;
@@ -58,13 +60,13 @@
     margin: 50px 0 0 0px;
     overflow: auto;
 }
-/*ÓÒ±ßÊÖ»úĞÅÏ¢*/
+/*å³è¾¹æ‰‹æœºä¿¡æ¯*/
 .phone_info{
     width: 45%;
     margin: 50px 0 0 55px;
 
 }
-/*ÓÒ±ßÊÖ»úĞÅÏ¢ £º tiile */
+/*å³è¾¹æ‰‹æœºä¿¡æ¯ ï¼š tiile */
 .title_step{
     height: 60px;
     margin-bottom: 55px;
@@ -91,10 +93,7 @@
     font-size: 10px;
     margin: 30px 10px 0 0;
 }
-/*ÓÒ±ßÊÖ»úĞÅÏ¢ £º 1,Ñ¡Ôñ°æ±¾ */
-.J_stepList{
-
-}
+/*å³è¾¹æ‰‹æœºä¿¡æ¯ ï¼š 1,é€‰æ‹©ç‰ˆæœ¬ */
 .J_stepItem{
     float: left;
     width: 47%;
@@ -121,11 +120,9 @@
     font-size: 12px;
     color: #b0b0b0;
 }
-/*ÓÒ±ßÊÖ»úĞÅÏ¢ £º 2,Ñ¡ÔñÑÕÉ« */
-.color_step{
-
-}
-/*ÓÒ±ßÊÖ»úĞÅÏ¢ £º 3,½áËãÏÂÒ»²½ */
+/*å³è¾¹æ‰‹æœºä¿¡æ¯ ï¼š 2,é€‰æ‹©é¢œè‰² */
+.color_step{  }
+/*å³è¾¹æ‰‹æœºä¿¡æ¯ ï¼š 3,ç»“ç®—ä¸‹ä¸€æ­¥ */
 .next_step span{
     color: #9b9b9b;
     display: block;

@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 16-8-3.
+ * è´­ç‰©è½¦æœåŠ¡:è¿”å›æˆ‘çš„è´­ç‰©è½¦å¯¹è±¡
  */
 
 angular.module("cartMd", ["swxLocalStorage","utilMd"])
@@ -8,12 +8,12 @@ angular.module("cartMd", ["swxLocalStorage","utilMd"])
             this.cartName = cartName;
             this.items = [];
 
-            // ³õÊ¼»¯Ê±¼ÓÔØ¹ºÎï³µ
+            // åˆå§‹åŒ–æ—¶åŠ è½½è´­ç‰©è½¦
             this.loadItems();
             //this.clearItems();
         }
 
-        // ´Ólocal storage¼ÓÔØ¹ºÎï³µµÄ²úÆ·
+        // ä»local storageåŠ è½½è´­ç‰©è½¦çš„äº§å“
         myCart.prototype.loadItems = function () {
             var items = $localStorage.get(this.cartName + "_items");
             if (items != null) {
@@ -21,21 +21,21 @@ angular.module("cartMd", ["swxLocalStorage","utilMd"])
             }
         }
 
-        // ±£´æ¹ºÎï³µ
+        // ä¿å­˜è´­ç‰©è½¦
         myCart.prototype.saveItems = function () {
             $localStorage.put(this.cartName+ "_items",this.items);
         }
 
-        // Çå¿Õ¹ºÎï³µ
+        // æ¸…ç©ºè´­ç‰©è½¦
         myCart.prototype.clearItems = function () {
             this.items = [];
             this.saveItems();
         }
 
-        // Á¢¼´¹ºÂò½«²úÆ·¼ÓÈëµ½¹ºÎï³µÀï
+        // ç«‹å³è´­ä¹°å°†äº§å“åŠ å…¥åˆ°è´­ç‰©è½¦é‡Œ
         myCart.prototype.addProductInCart = function (product) {
             var productIndexOf = util.contains(this.items,product);
-            //Èç¹û²úÆ·ÒÑ¾­´æÔÚ¹ºÎï³µÀïÔò´Î²úÆ·µÄÊıÁ¿+1,·ñÔòÖ±½Ó°Ñ²úÆ·¼ÓÈëµ½¹ºÎï³µÊı×éÀï
+            //å¦‚æœäº§å“å·²ç»å­˜åœ¨è´­ç‰©è½¦é‡Œåˆ™æ¬¡äº§å“çš„æ•°é‡+1,å¦åˆ™ç›´æ¥æŠŠäº§å“åŠ å…¥åˆ°è´­ç‰©è½¦æ•°ç»„é‡Œ
             if (productIndexOf != -1) {
                 this.items[productIndexOf].quantity++;
             }
@@ -48,7 +48,7 @@ angular.module("cartMd", ["swxLocalStorage","utilMd"])
             this.saveItems();
         }
 
-        //¹ºÎï³µÀï²úÆ·µÄÊıÁ¿¼Ó¼õ²Ù×÷
+        //è´­ç‰©è½¦é‡Œäº§å“çš„æ•°é‡åŠ å‡æ“ä½œ
         myCart.prototype.addNumber = function (product,number){
             if(product.quantity<=1 && number<0)
             {
@@ -56,18 +56,17 @@ angular.module("cartMd", ["swxLocalStorage","utilMd"])
             }
             product.quantity+=number;
         }
-        //»ñÈ¡¹ºÎï³µµÄ×Ü¼Û
+        //è·å–è´­ç‰©è½¦çš„æ€»ä»·
         myCart.prototype.getTotalPrice = function (product,number){
             var total = 0;
             angular.forEach(this.items,function(item){
                 if(item.isChecked){
                     total += item.quantity * item.price;
                 }
-
             })
             return total;
         }
-        //»ñÈ¡¹ºÎï³µ±»Ñ¡ÔñµÄ²úÆ·ÊıÁ¿
+        //è·å–è´­ç‰©è½¦è¢«é€‰æ‹©çš„äº§å“æ•°é‡
         myCart.prototype.getAllSelected = function (product,number){
             var selectedNum = 0;
             angular.forEach(this.items,function(item){
@@ -78,25 +77,25 @@ angular.module("cartMd", ["swxLocalStorage","utilMd"])
             })
             return selectedNum;
         }
-        //É¾³ı¹ºÎï³µÀïµÄ²úÆ·
+        //åˆ é™¤è´­ç‰©è½¦é‡Œçš„äº§å“
         myCart.prototype.removeItem = function (index){
             this.items.splice(index,1);
             this.saveItems();
         }
-        // ´´½¨ÎÒµÄ¹ºÎï³µ
+        // åˆ›å»ºæˆ‘çš„è´­ç‰©è½¦
         var myCartObj;
-        if($rootScope.user!=null){//ÓÃ»§ÒÑ¾­µÇÂ¼
+        if($rootScope.user!=null){//ç”¨æˆ·å·²ç»ç™»å½•
             myCartObj = new myCart($rootScope.user.name);
         }
 
-        // ·şÎñ·µ»ØÎÒµÄ¹ºÎï³µÊµÀı¶ÔÏó
+        // æœåŠ¡è¿”å›æˆ‘çš„è´­ç‰©è½¦å®ä¾‹å¯¹è±¡
         return {
             myCart: myCartObj
         };
     })
 
-//¹¹Ôìº¯Êı£º´´½¨¹ºÎï³µÀïµÄ²úÆ·
-//{"productId":1,"name":"Ğ¡Ã×Max","price":"1499","img":"max","number":15,"fl_id":1},
+//æ„é€ å‡½æ•°ï¼šåˆ›å»ºè´­ç‰©è½¦é‡Œçš„äº§å“
+//{"productId":1,"name":"å°ç±³Max","price":"1499","img":"max","number":15,"fl_id":1},
 function productClass(productId,name,price,quantity,img,isChecked)
 {
     this.productId = productId;
@@ -106,4 +105,5 @@ function productClass(productId,name,price,quantity,img,isChecked)
     this.imgSrc = img;
     this.isChecked = isChecked;
 }
+
 

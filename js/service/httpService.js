@@ -1,30 +1,30 @@
 /**
- * Created by Administrator on 16-6-20.
+ * Ajax 鏈嶅姟锛岃皟鐢ㄥ悗鍙扮殑api鎺ュ彛锛屽畬鎴愭ā鍨嬫暟鎹殑鍛堢幇
  */
 
 angular.module("httpMd",[])
     .factory("httpService",function($http,$q){
         return{
             get:function(_urlPath){
-                var defer=$q.defer(); //声明延后执行
+                var defer=$q.defer();
                 $http({method:'GET',url:_urlPath})
                     .success(function(data,status,headers,config){
-                        defer.resolve(data); //声明执行成功
+                        defer.resolve(data); //澹版槑鎵ц鎴愬姛
                     })
                     .error(function(data,status,headers,config){
-                        defer.reject(); //声明执行失败
+                        defer.reject(); //澹版槑鎵ц澶辫触锛屾澶勫彲浠ュ鐞嗚姹傚け璐ュ悗鐨勯�昏緫
                     });
-                return defer.promise; //返回承诺，返回获取数据的API
+                return defer.promise; //杩斿洖鎵胯锛岃繑鍥炶幏鍙栨暟鎹殑API
             }
         }
         var urlPath = "json/products.json"
         var factory = {
             data:$http(	{
-                    method:'get',
-                    url:urlPath,
-                    headers:{ 'Content-Type': 'application/x-www-form-urlencoded; charset=gbk'}}
+                method:'get',
+                url:urlPath,
+                headers:{ 'Content-Type': 'application/x-www-form-urlencoded; charset=gbk'}}
             ).success(function(data,state,config,headers){
-                    return data;
-                })
+                return data;
+            })
         };
     })

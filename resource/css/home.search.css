@@ -1,3 +1,5 @@
+/*产品搜索页面样式*/
+/*搜索过滤结果 start*/
 .filter_list_wrap{
     border: #e0e0e0;
 }
@@ -9,9 +11,6 @@
     height: 42px;
     overflow: hidden;
     padding: 12px 0;
-}
-.filter_list_item dl{
-
 }
 .filter_list_item dt{
     width: 72px;
@@ -28,13 +27,15 @@
 .filter_list_item dd:nth-of-type(1){
     color: #ff6700;
 }
+/*搜索过滤结果 end*/
 
-/*���м*/
+/*breadcrumbs 面包屑*/
 .breadcrumbs{
     padding-left: 6%;
     color: #757575;
 }
 
+/*search_content start*/
 .search_content {
     margin-top: 20px;
     padding: 20px 0 100px;
@@ -58,7 +59,7 @@
     margin-left: -1px;
 }
 .search_title_right li{
-     padding:  0 27px;
+    padding:  0 27px;
     float: left;
     line-height: 20px;
 }
@@ -82,13 +83,14 @@
     webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+/*喜欢，收藏，加入购物车*/
 .btn_like{
     left: 20px;
 }
 .btn_buy{
     right: 20px;
 }
-
 .search_goods_item:hover .btn_like,.search_goods_item:hover .btn_buy{
     opacity: 1;
 }

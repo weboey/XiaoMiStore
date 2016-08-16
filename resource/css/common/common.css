@@ -1,14 +1,4 @@
-.btn-primary-fill {
-    background: #ff6700;
-    border-color: #ff6700;
-    color: #fff;
-}
-
-.btn-primary:hover{
-    background-color: #ff6700;
-    border-color: #ff6700;
-}
-
+/***** button页面按钮 start*/
 .btn {
     display: inline-block;
     width: 158px;
@@ -24,17 +14,23 @@
     -webkit-transition: all .4s;
     transition: all .4s;
 }
-/*.btn-primary {
+.btn-primary-fill {
+    background: #ff6700;
     border-color: #ff6700;
-    background-color: #fff;
-    color: #ff6700;
-}*/
+    color: #fff;
+}
+.btn-primary:hover{
+    background-color: #ff6700;
+    border-color: #ff6700;
+}
 .btn-primary {
     background: #ff6700;
     border-color: #ff6700;
     color: #fff;
 }
-/*header*/
+/***** button页面按钮 end*/
+
+/***** head页面头部 start*/
 .head {
     font-size: 12px;
     height: 102px;
@@ -68,12 +64,9 @@
     display: inline-block;
     margin-left: 15px;
 }
+/***** head页面头部 end*/
 
-
-/***** footer */
-.footer{
-
-}
+/***** footer 页面底部 start*/
 /*footer  footer_service*/
 .footer_service{
     padding: 30px 0;
@@ -91,11 +84,6 @@
     line-height: 25px;
     border-right: 1px solid #e0e0e0;
     text-align: center;
-    padding-right: 60px;
-}
-.footer_service ul li a{
-
-
 }
 
 /*footer  footer_link*/
@@ -104,7 +92,7 @@
 }
 .footer_link dl{
     float: left;
-    width: 150px;
+    width: 160px;
     height: 112px;
     margin: 0;
 }
@@ -121,7 +109,7 @@
 
 .footer_contact{
     float: right;
-    width: 230px;
+    width: 245px;
     height: 112px;
     border-left: 1px solid #e0e0e0;
     text-align: center;
@@ -137,4 +125,6 @@
 }
 .footer_site p{
     margin: 32px 0;
+    text-align: center;
 }
+/***** footer 页面底部 end*/

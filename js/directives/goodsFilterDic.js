@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 16-6-26.
+ * 产品搜索页面的过滤选择项指令
  */
 
 angular.module("goodsFilterMd", [])

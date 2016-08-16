@@ -1,5 +1,5 @@
 <div ng-mouseenter="showContent()" ng-mouseleave="closeContent()">
-    <a class="wai_a" href="#">{{parentItem.text}}</a>
+    <a class="wai_a" >{{parentItem.text}}</a>
 
     <div  ng-if="ContentArray.length" ng-switch="childrenDivClass==='children_horizontal'"
          class="{{childrenDivClass}}" ng-class="setClass()" ng-show="flag">
