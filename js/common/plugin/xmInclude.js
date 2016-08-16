@@ -1,16 +1,16 @@
-/**
- * Created by Administrator on 16-7-30.
- */
-
-///*·½·¨3£ºÖ¸Áî½áºÏÊ¹ÓÃng-includeÖ¸Áî¿ÉÒÔ½â¾ö¹²Í¬Ä£°æÖĞÈÔÈ»´æÔÚÒ»²îÒìµÄdomÔªËØ*/
+//å‰ç«¯çš„é¡µé¢åˆ†è§£ä¸ç»„è£…:å°†ä¸»é¡µé¢index.htmlåˆ†è§£ä¸ºheader.html\container.html\footer.htmlä¸‰éƒ¨åˆ†
+///*æ–¹æ³•1:ä½¿ç”¨ui-router
+///*æ–¹æ³•2:å°†åˆ†è§£çš„é¡µé¢å†™æˆdirective
+///*æ–¹æ³•3ï¼šæŒ‡ä»¤ç»“åˆä½¿ç”¨ng-includeæŒ‡ä»¤å¯ä»¥è§£å†³å…±åŒæ¨¡ç‰ˆä¸­ä»ç„¶å­˜åœ¨ä¸€å·®å¼‚çš„domå…ƒç´ */
+//è¿™ä¸‰ç§æ–¹æ³•å®è´¨ä¸Šéƒ½æ˜¯åˆ©ç”¨ajaxæ¥åŠ è½½æ¨¡æ¿ã€‚ä½¿ç”¨ajaxæ¥å®ç°é¡µé¢åˆ†è§£è¿™æ ·çš„åŠŸèƒ½ï¼Œç›¸æ¯”ä¼ ç»Ÿçš„ä½¿ç”¨åå°åŠ¨æ€è„šæœ¬è¯­è¨€çš„æ–¹æ¡ˆï¼Œå¿…ç„¶ä¼šå¸¦æ¥é¢å¤–çš„å¼€é”€ã€‚
 angular.module("xmIncludeMd",[])
     .directive('xmInclude', function factory() {
         var directiveDefinitionObject = {
             restrict: "AE",
             replace: "true",
             scope: {
-                //¿ÉÒÔ¸ù¾İĞèÒªÉèÖÃÍâ²¿´«ÈëµÄÊôĞÔ,ÒòÎªÔÚ¹«¹²µÄÄ£°æÖĞ¿ÉÄÜ´æÔÚ¸ö±ğDOMÔªËØ²»Í¬/**/
-                //´ËÊ±¿ÉÒÔÔÚÊ¹ÓÃÖ¸ÁîµÄµØ·½´«Èë¸öboolÖµ£¬¸ù¾İÕâ¸öboolÖµÅĞ¶ÏÄ£°æÖĞ²îÒìµÄDOMÔªËØÊÇ·ñĞèÒªäÖÈ¾/*/
+                //å¯ä»¥æ ¹æ®éœ€è¦è®¾ç½®å¤–éƒ¨ä¼ å…¥çš„å±æ€§,å› ä¸ºåœ¨å…¬å…±çš„æ¨¡ç‰ˆä¸­å¯èƒ½å­˜åœ¨ä¸ªåˆ«DOMå…ƒç´ ä¸åŒ/**/
+                //æ­¤æ—¶å¯ä»¥åœ¨ä½¿ç”¨æŒ‡ä»¤çš„åœ°æ–¹ä¼ å…¥ä¸ªboolå€¼ï¼Œæ ¹æ®è¿™ä¸ªboolå€¼åˆ¤æ–­æ¨¡ç‰ˆä¸­å·®å¼‚çš„DOMå…ƒç´ æ˜¯å¦éœ€è¦æ¸²æŸ“/*/
                 title: "@?",
                 src: "@",
                 user:"="
@@ -18,11 +18,11 @@ angular.module("xmIncludeMd",[])
             template: "<div ng-include='src'></div>",
             compile: function compile(tElement, tAttrs, transclude) {
                 return function (scope, element, attrs) {
-                    //¸ù¾İ²»Í¬ĞèÒª»¹¿ÉÒÔÔÚlinkº¯ÊıÖĞ´¦Àí·µ»ØµÄÄ£°æ/**/
-                   // scope.src = attrs.src;
-                   // scope.getContentUrl = function () {
-                   //     return "view/common/" + attr.src + ".html"
-                   // }
+                    //æ ¹æ®ä¸åŒéœ€è¦è¿˜å¯ä»¥åœ¨linkå‡½æ•°ä¸­å¤„ç†è¿”å›çš„æ¨¡ç‰ˆ/**/
+                    // scope.src = attrs.src;
+                    // scope.getContentUrl = function () {
+                    //     return "view/common/" + attr.src + ".html"
+                    // }
                 }
             }
         };

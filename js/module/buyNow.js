@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 16-6-13.
+ * 立即购买页面路由模块
  */
 
 angular.module('buyNow', ['ui.router','cartMd'])
@@ -21,10 +21,10 @@ angular.module('buyNow', ['ui.router','cartMd'])
                         "": {
                             templateUrl: 'view/buyNow.html',
                             controller: function ($scope, $stateParams, productsResolve, util, $window,$location,$anchorScroll,cartService,$state,$rootScope) {
-                                $scope.userSelectArr = [];
-                                $scope.buyProduct = util.queryItemById(productsResolve.products, $stateParams.productId);
-                                $scope.buyProductVersions = util.queryArrByField(productsResolve.versions_info, $stateParams.productId, "p_id");
-                                $scope.buyProductColors = productsResolve.color_base;
+                                $scope.userSelectArr = [];//存放用户选择的产品信息
+                                $scope.buyProduct = util.queryItemById(productsResolve.products, $stateParams.productId);//用户购买的产品对象
+                                $scope.buyProductVersions = util.queryArrByField(productsResolve.versions_info, $stateParams.productId, "p_id"); //产品对象的版本信息
+                                $scope.buyProductColors = productsResolve.color_base;//产品对象的版本信息
                                 //第一步选择版本
                                 $scope.pushUserSelectVersion = function (userSelect) {
 
@@ -66,8 +66,9 @@ angular.module('buyNow', ['ui.router','cartMd'])
                                           return;
                                     }
                                     //拼接用户选择的产品版本，颜色
+                                    buyProduct.name = "";
                                     angular.forEach($scope.userSelectArr,function(userSelectItem){
-                                        buyProduct.name+=" "+userSelectItem.name;
+                                       buyProduct.name+=" "+userSelectItem.name;
                                     })
                                     //购买的产品加入到我的购物车
                                     $scope.myCart.addProductInCart(buyProduct);
@@ -95,18 +96,6 @@ angular.module('buyNow', ['ui.router','cartMd'])
                                      });
                                      }*/
                                 }
-                                /*                                什么时候用$apply()
-                                 还是那个问题，那我们到底什么时候需要去调用$apply()方法呢？情况非常少，
-                                 实际上几乎我们所有的代码都包在$scope.$apply()里面，
-                                 像ng-click，controller的初始化，
-                                 $http的毁掉函数等。在这些情况下，
-                                 我们不需要自己调用，实际上我们也不能自己调用，
-                                 否则在$apply()方法里面再调用$apply()方法会抛出错误。
-                                 如果我们需要在一个新的执行序列中运行代码时才真正需要用到它，
-                                 而且当且仅当这个新的执行序列不是被angular JS的库的方法创建的，
-                                 这个时候我们需要将代码用$scope.$apply()包起来。下面用一个例子解释：*/
-
-
                             }
                         }
                     }
@@ -114,41 +103,3 @@ angular.module('buyNow', ['ui.router','cartMd'])
         }
     ])
 
-
-/*
- controller: function ($scope, $stateParams, productsResolve, util) {
- $scope.buyProductObj = {
- product:'',
- userSelectArr :[],
- versions:'',
- color:'',
- price:'',
- }
- $scope.buyProductObj.product = util.queryItemById(productsResolve.products, $stateParams.productId);
- $scope.buyProductObj.versions = productsResolve.versions_info;
- $scope.buyProductObj.colors = productsResolve.color_info;
- //第一步选择版本
- $scope.pushUserSelectVersion = function (userSelect) {
- $scope.buyProductObj.versions = [userSelect];
- //$scope.userSelectArr.pushObj(userSelect);
- //util.sava("userSelect", $scope.userSelectArr);
- $scope.buyProductObj.userSelectArr = $scope.buyProductObj.versions;
- //每次重选版本时重置选择的颜色
- $scope.buyProductObj.color = [];
- $scope.buyProductObj.product.price = userSelect.price;
- $scope.buyProductColors = util.queryArrByField(productsResolve.color_info2, userSelect.id, "b_id");
- };
- //第二步选择颜色
- $scope.pushUserSelectColor = function (userSelect) {
- if (!$scope.userSelectArr.length) {
- return;
- }
- $scope.userSelectColor = [userSelect];
- $scope.userSelectArr = $scope.userSelectVersion.concat($scope.userSelectColor);
- curUserColor = userSelect;
- };
- //设置用户选择的产品信息样式
- $scope.setClassActive = function (item, userSelectIndex) {
- return $scope.userSelectArr[--userSelectIndex] === item;
- };
- }*/

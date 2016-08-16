@@ -1,0 +1,46 @@
+{
+  "focusImg": [
+    {"src": "resource/img/1.jpg", "productId": 12},
+    {"src": "resource/img/2.jpg", "productId": 1},
+    {"src": "resource/img/3.jpg", "productId": 5},
+    {"src": "resource/img/4.jpg", "productId": 2},
+    {"src": "resource/img/5.jpg", "productId": 10}
+  ],
+  "mxdp": [
+    {"imgName": 1, "productId": 1},
+    {"imgName": 2, "productId": 1},
+    {"imgName": 3, "productId": 1},
+    {"imgName": 4, "productId": 1},
+    {"imgName": 5, "productId": 1},
+    {"imgName": 6, "productId": 1},
+    {"imgName": 7, "productId": 1},
+    {"imgName": 8, "productId": 1},
+    {"imgName": 9, "productId": 1},
+    {"imgName": 10, "productId": 1}
+  ],
+  "wntj": [
+    {"imgName": "w1"}, {"imgName": "w2"}, {"imgName": "w3"}, {"imgName": "w4"}, {"imgName": "w5"},
+    {"imgName": "w6"}, {"imgName": "w7"}, {"imgName": "w8"}, {"imgName": "w9"}, {"imgName": "w10"},
+    {"imgName": "w11"}, {"imgName": "w12"}, {"imgName": "w13"}, {"imgName": "w14"}, {"imgName": "w15"},
+    {"imgName": "w16"}, {"imgName": "w17"}, {"imgName": "w18"}, {"imgName": "w19"}, {"imgName": "w20"}
+  ],
+  "filterTypes": [
+    {"typeId": 1, "name": "分类"},
+    {"typeId": 2, "name": "机型"},
+    {"typeId": 3, "name": "品牌"}
+  ],
+  "filterContents": [
+    {"Id": 1, "text": "线材", "typeId": 1},
+    {"Id": 2, "text": "保护套", "typeId": 1},
+    {"Id": 3, "text": "贴膜", "typeId": 1},
+    {"Id": 4, "text": "小米手机5", "typeId": 2},
+    {"Id": 5, "text": "小米手机4S", "typeId": 2},
+    {"Id": 6, "text": "小米平板2", "typeId": 2},
+    {"Id": 7, "text": "小米手机4c", "typeId": 2},
+    {"Id": 8, "text": "小米", "typeId": 3},
+    {"Id": 9, "text": "第三方品牌", "typeId": 3}
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

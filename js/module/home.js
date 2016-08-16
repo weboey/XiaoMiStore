@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 16-6-13.
+ * home page
  */
 
 angular.module('home', ['ui.router'])
@@ -39,22 +39,18 @@ angular.module('home', ['ui.router'])
                     views: {
                         "":{
                             templateUrl: 'view/page/home.main.html',
-                            controller:function(){
-
-                            }
+                            controller:function(){}
                         },
                         "loginUser":{
                             templateUrl: 'view/page/home.userLogin.html',
-                            controller:function($scope,loginService,$rootScope){
-
-                            }
+                            controller:function($scope,loginService,$rootScope){}
                         }
                     },
                     ncyBreadcrumb:{
                         label:"首页"
                     }
                 })
-                .state("home.products",{
+                .state("home.products",{ //产品信息
                     //home.products({productId:childrenItem.id})
                     url:'/product/:productId',
                     //abstract:true,
@@ -70,8 +66,7 @@ angular.module('home', ['ui.router'])
                                 .then(function (data) {
                                     return util.queryItemById(data.products, $stateParams.productId);
                                 });
-                        },
-                        //productObj
+                        }
                     },
                     controller:function($scope,productObj,$window,$state,$stateParams,productsResolve){
                         $scope.product =productObj;
@@ -94,7 +89,7 @@ angular.module('home', ['ui.router'])
                     }
 
                 })
-                .state("home.products.detail",{
+                .state("home.products.detail",{ //产品详情信息
                     url:'/{detailType}',
                     templateUrl: 'view/page/home.product.detail.html',
                     controller:function($scope,$stateParams,util){
@@ -102,7 +97,7 @@ angular.module('home', ['ui.router'])
                     }
                 })
 
-                .state("home.search",{
+                .state("home.search",{ //搜索产品信息
                     url:'/search/:searchKey',
                     templateUrl: 'view/page/home.search.html',
                     controller:function($scope,$stateParams){

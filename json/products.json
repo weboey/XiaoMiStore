@@ -11,7 +11,9 @@
     {"productId":9,"name":"小米盒子3","price":"1099","img":"mi4c","number":11,"fl_id":5},
     {"productId":10,"name":"小米电视3S 43英寸","price":"1299","img":"mipad2-64","number":16,"fl_id":4},
     {"productId":11,"name":"九号平衡车","price":"1299","img":"mipad2-64","number":16,"fl_id":7},
-    {"productId":12,"name":"小米空气净化器 2","price":"699","img":"mipad2-64","number":16,"fl_id":7}
+    {"productId":12,"name":"小米空气净化器 2","price":"699","img":"mipad2-64","number":16,"fl_id":7},
+    {"productId":13,"name":"小米手机4","price":"1799","img":"mi4c","number":31,"fl_id":1},
+    {"productId":14,"name":"小米Note","price":"2799","img":"mi4c","number":91,"fl_id":1}
   ],
   "color_base":[
     {"colorId": 1, "name": "金色", "p_id": "1,2,3,4,5,6","b_id":"5,6","img":"jin"},

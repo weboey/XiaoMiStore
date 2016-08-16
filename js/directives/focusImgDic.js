@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 16-6-20.
+ * 瀹炵幇鐒︾偣鍥炬晥鏋滅殑鎸囦护锛氶椤佃疆鎾浘锛屾槑鏄熷崟鍝侊紝涓烘偍鎺ㄨ崘
  */
 
 angular.module("focusImgMd", [])
@@ -57,12 +57,3 @@ angular.module("focusImgMd", [])
         }
     }
 )
-
-// var imgWidth = tElement[0].getElementsByTagName("img")[0].width;
-//获取不到ng-repeat里的元素
-//console.log(element[0].querySelector('#focusImg').getElementsByTagName("img"));
-//解决方法1
-//$timeout(function(){// console.log(element.find('.listClass'));// console.log(element[0].querySelector('#focusImg').getElementsByTagName('img'));
-//},1000);
-//解决方法2 在compile函数中获取
-//解决方法3 子组件可以依赖父组件，父组件不要依赖子组件，宁愿依赖数据，不要依赖DOM，宁愿依赖结构，不要依赖内容

@@ -7,7 +7,6 @@
     width: 243px;
     font-size: 14px;
     outline: 0;
-
 }
 .search input:focus{ border-color: #ff6700; }
 .search input[type="submit"]{  background: #ff6700;  color: #fff;  margin-left: -4px;  }
@@ -38,8 +37,6 @@
     top: 6px;
     color: #b0b0b0;
 }
-
-
 .search_list ul li:hover{
     cursor: pointer;
     background-color: rgba(147, 144, 144, 0.12);

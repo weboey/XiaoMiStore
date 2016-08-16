@@ -1,4 +1,4 @@
-/*Í·²¿¹¤¾ßÌõ start*/
+/*ä¸»é¡µå¤´éƒ¨å·¥å…·æ¡ start*/
 .topbar {
     background: #333;
     height: 40px;
@@ -30,13 +30,11 @@
     height: 40px;
     line-height: 40px;
 }
-
 .topbar_cart a {
     position: relative;
     z-index: 1;
     display: block;
     height: 40px;
-
     text-align: center;
     background: #424242;
 }
@@ -44,9 +42,9 @@
     color: #ff6700;
     background: #fff;
 }
-/*Í·²¿¹¤¾ßÌõ end */
+/*ä¸»é¡µå¤´éƒ¨å·¥å…·æ¡ end */
 
-/*Í·²¿µ¼º½À¸ start*/
+/*ä¸»é¡µå¤´éƒ¨å¯¼èˆªæ  start*/
 .site_head {
     position: relative;
     z-index: 20;
@@ -58,8 +56,7 @@
 .margin_25 {
     margin-top: 25px;
 }
-
-/*Í·²¿µ¼º½À¸ end*/
+/*ä¸»é¡µå¤´éƒ¨å¯¼èˆªæ  end*/
 
 /*home.product.html css start*/
 .product_hd {
@@ -79,18 +76,12 @@
     transition: margin-top .5s ease-out;
     box-shadow: 0 0 3px #b0b0b0;
 }
-.product_title {
-
-}
 .product_title h1{
     margin: 0;
     font-size: 18px;
     font-weight: 400;
     line-height: 50px;
     color: #424242;
-}
-.product_nav {
-
 }
 .product_nav .active{
     color: #ff6700;
@@ -103,9 +94,6 @@
     line-height: 50px;
     margin: 0 20px 0 0;
 }
-.product_buy {
-
-}
 .product_buy a{
     margin: 10px 0;
     width: 118px;
@@ -113,7 +101,6 @@
     font-size: 12px;
     line-height: 28px;
 }
-
 /*home.product.html css end*/
 
 .product_bd .product_description{
@@ -128,11 +115,11 @@
 .product_bd .product_description img{
     width: 100%;
     height: 100%;
-  /*  margin-left: -674.5px;
-    margin-top: -379.40625px;*/
+    /*  margin-left: -674.5px;
+      margin-top: -379.40625px;*/
 }
 
-/*home Ã÷ĞÇµ¥Æ·*/
+/*home æ˜æ˜Ÿå•å“*/
 .home_wntj,.home_mxdp{
     margin-top: 15px;
 }
@@ -142,7 +129,7 @@
 .home_mxdp .box-bd ul{
     width:2480px;
 }
-/*home ÎªÄúÍÆ¼ö*/
+/*home ä¸ºæ‚¨æ¨è*/
 .home_wntj .box-bd ul li{
     background: #fff;
 }
@@ -150,7 +137,7 @@
     width:4960px;
 }
 
-/* ºÚ¿Æ¼¼*/
+/* äº§å“è¯¦ç»†ä¿¡æ¯:é»‘ç§‘æŠ€*/
 /*hkj*/
 .hkj{
     width: 1349px;
@@ -198,7 +185,7 @@
     overflow: hidden;
 }
 .hkj-list ul{
-   margin-bottom: -1px;
+    margin-bottom: -1px;
 }
 .hkj-list ul li{
     width: 203px;
@@ -286,7 +273,7 @@
     line-height: 1.75;
 }
 
-/* Ïà»ú*/
+/* äº§å“è¯¦ç»†ä¿¡æ¯:ç›¸æœº*/
 .camera-info{
     height: 1249px;
     background: url(../../resource/img/mi5/c-6.jpg) center 0 no-repeat;
@@ -317,7 +304,6 @@
     margin: 30px 10px 0;
     cursor: pointer;
 }
-
 .camera-info ul{
     margin: 50px 0;
     overflow: hidden;
@@ -335,7 +321,6 @@
     display: block;
     font-size: 12px;
 }
-
 .camera-fd{
     position: relative;
     height: 1249px;
@@ -360,7 +345,7 @@
     margin: 15px 0;
 }
 
-/* ÆÁÄ»*/
+/* äº§å“è¯¦ç»†ä¿¡æ¯:å±å¹•*/
 .screen-info{
     height: 900px;
     background: url(../../resource/img/mi5/screen-intro-s.jpg) center 400px no-repeat;
@@ -404,10 +389,6 @@
     left: 4%;
     top: 100px;
 }
-.led-content h1{
-
-}
-
 .led-content p{
     font-size: 16px;
     line-height: 30px;

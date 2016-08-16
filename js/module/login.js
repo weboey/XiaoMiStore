@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 16-6-13.
+ * login page
  */
 
 angular.module('login', ['ui.router'])
@@ -31,7 +31,7 @@ angular.module('login', ['ui.router'])
                         }
                     },
                     ncyBreadcrumb:{
-                        label:"µÇÂ¼",
+                        label:"ï¿½ï¿½Â¼",
                         parent:"home.main"
                     }
 

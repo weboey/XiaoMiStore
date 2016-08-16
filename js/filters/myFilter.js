@@ -1,7 +1,6 @@
-/**
- * Created by Administrator on 16-6-26.
- */
+/*过滤器模块*/
 angular.module("filterMd", [])
+    //返回某一分类下的所有产品
     .filter('myFilter', function ($filter) {
         return function (input, itemId) {
             var array = [];
@@ -11,10 +10,11 @@ angular.module("filterMd", [])
                 }
             })
             return array;
-// return $filter("filter")(input,{fl_id:itemId})$filter("filter")(input,{fl_id:2});
-//return $filter("limitTo")(input,3);
+            // return $filter("filter")(input,{fl_id:itemId})$filter("filter")(input,{fl_id:2});
+            //return $filter("limitTo")(input,3);
         }
     })
+    //分页过滤
     .filter('myFilter2', function () {
         return function (input, page) {
             return input.slice((6 * (page - 1)), (page * 6));

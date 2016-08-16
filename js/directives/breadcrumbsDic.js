@@ -1,3 +1,4 @@
+/*é¢åŒ…å±‘æŒ‡ä»¤*/
 angular.module('breadcrumbsMd', ["ui.router"])
     .directive('breadcrumbs', function factory($rootScope, $state, $stateParams, $interpolate) {
         return {
@@ -17,6 +18,7 @@ angular.module('breadcrumbsMd', ["ui.router"])
             }
 
         };
+        //æ›´æ–°å½“å‰çš„é¢åŒ…å±‘
         function updateBreadcrumbs() {
             var breadcrumbs = [];
             for (var curState = $state.$current.name; curState; curState = breadcrumbParentState(curState))
@@ -25,11 +27,11 @@ angular.module('breadcrumbsMd', ["ui.router"])
             }
             return breadcrumbs.reverse();
         }
-
+        //ç”Ÿæˆé¢åŒ…å±‘
         function generateBreadcrumbs(chain, stateName) {
             var skip = false;
             var displayName, breadcrumbLabel;
-            //Èç¹û×´Ì¬ÒÑ¾­´æÔÚ×´Ì¬Á´ÖĞ£¬Ö±½Ó·µ»Ø
+            //å¦‚æœçŠ¶æ€å·²ç»å­˜åœ¨çŠ¶æ€é“¾ä¸­ï¼Œç›´æ¥è¿”å›
             for (var i = 0; i < chain.length; i++) {
                 if (chain[i].name === stateName) {
                     return;
@@ -48,8 +50,8 @@ angular.module('breadcrumbsMd', ["ui.router"])
                     skip = true;
                 }
             }
-            if (!state.abstract && !skip) {
-                //Èç¹ûµ±Ç°×´Ì¬²»ÊÇ³éÏóµÄ£¬²¢ÇÒskipÎªfalse
+            if (!state.abstract && !skip) {//å¦‚æœå½“å‰çŠ¶æ€ä¸æ˜¯æŠ½è±¡çš„ï¼Œå¹¶ä¸”skipä¸ºfalse
+                //éœ€è¦æ˜¾ç¤ºå‚æ•°çš„é¢åŒ…å±‘
                 if (state.ncyBreadcrumb && state.ncyBreadcrumb.param) {
                     chain.push({
                         link: stateName,
@@ -64,23 +66,25 @@ angular.module('breadcrumbsMd', ["ui.router"])
                 });
             }
         }
+        //è¿”å›å½“å‰çŠ¶æ€æˆ–è€…å½“å‰çŠ¶æ€çš„çˆ¶çŠ¶æ€
         function breadcrumbParentState(stateName) {
             var curState = $state.get(stateName);
             if (curState.abstract)return;
-            //Èç¹û×´Ì¬ÅäÖÃÁËÃæ°üĞ¼¶ÔÏó£¬²¢ÇÒÅäÖÃÁËparentÊôĞÔ
+            //å¦‚æœçŠ¶æ€é…ç½®äº†é¢åŒ…å±‘å¯¹è±¡ï¼Œå¹¶ä¸”é…ç½®äº†parentå±æ€§
             if (curState.ncyBreadcrumb && curState.ncyBreadcrumb.parent) {
-                // Handle the "parent" property of the breadcrumb, override the parent/child relation of the state
                 var isFunction = typeof curState.ncyBreadcrumb.parent === 'function';
-                //ÅĞ¶Ï¸¸×´Ì¬µÄÅäÖÃÊôĞÔÊÇ·ñÊÇº¯Êı
+                //åˆ¤æ–­çˆ¶çŠ¶æ€çš„é…ç½®å±æ€§æ˜¯å¦æ˜¯å‡½æ•°
                 var parentStateRef = isFunction ? curState.ncyBreadcrumb.parent($rootScope) : curState.ncyBreadcrumb.parent;
                 if (parentStateRef) {
                     return parentStateRef;
                 }
             }
-            //·µ»Øµ±Ç°×´Ì¬µÄ¸¸×´Ì¬
+            //è¿”å›å½“å‰çŠ¶æ€çš„çˆ¶çŠ¶æ€
             var parent = curState.parent || (/^(.+)\.[^.]+$/.exec(curState.name) || [])[1];
             var isObjectParent = typeof parent === "object";
             return isObjectParent ? parent.name : parent;
         }
     })
+
+
 

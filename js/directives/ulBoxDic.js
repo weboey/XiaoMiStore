@@ -1,8 +1,7 @@
 /**
- * Created by Administrator on 16-6-21.
+ * 瀹炵幇ul瀵艰埅鏍忔晥鏋滅殑鎸囦护锛屽寘鎷綋鍓嶅ご閮ㄥ鑸爮,content閮ㄥ垎宸﹁竟鐨勫鑸爮
  */
 angular.module("ulBoxMd", ["filterMd"])
-
     .directive('ulBox', function factory() {
         var directiveDefinitionObject = {
             restrict:"AE",
@@ -67,28 +66,3 @@ angular.module("ulBoxMd", ["filterMd"])
         return directiveDefinitionObject;
     })
 
-
-/*
-if(scope.childrenItems.length && scope.item.id!==null){
-    scope.array = [];
-    scope.pageList =[];
-    angular.forEach(scope.childrenItems,function(obj){
-        if(scope.item.id.indexOf(obj.fl_id)!=-1){
-            scope.array.push(obj);
-        }
-    });
-    scope.pages = Math.ceil(scope.array.length / 6); //分页数
-//分页要repeat的数组
-    for (var i = 0; i < scope.pages; i++) {
-        scope.pageList.push(i + 1);
-    }
-    scope.setClass= function(){
-        return 'class-col-'+scope.pageList.length;
-    }
-//scope.childrenItems2 = scope.array.slice((scope.pageSize * (scope.selPage - 1)), (scope.selPage * scope.pageSize));
-}
-.filter('myFilter2', function ($filter) {
-    return function(input,page){
-        return input.slice((6 * (page - 1)), (page * 6));
-    }
-})*/

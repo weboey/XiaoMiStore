@@ -1,12 +1,9 @@
-/**
- * Created by Administrator on 16-8-5.
- */
-
+//复选框指令：实现购物车表格头一列勾选当前行数据的作用
 angular.module("checkboxMd", [])
     .factory("checkBoxService", function () {
         return{
             groups:[],
-            selectAllCheckBox:function(selectAll){
+            selectAllCheckBox:function(selectAll){//全选函数
                 angular.forEach(this.groups,function(scope){
                     scope.isChecked = selectAll;
                     scope.bindData.isChecked = selectAll;
@@ -19,9 +16,7 @@ angular.module("checkboxMd", [])
             restrict:"AE",
             replace:true,
             template:"<div><i class='radio-icon' ng-class='{checked:isChecked}' ng-click='changeChecked()'></i> 全选</div>",
-            scope:{
-
-            },
+            scope:{},
             controllerAs:'checkBoxContrller',
             //利用控制器进行指令间的通信适合在作用域链上的DOM节点元素，此处应该利用服务的单例模式特性进行通信
             //服务(service)提供了一种能在应用的整个生命周期内保持数据的方式，能够在控制器之间进行通信，且能保证数据的一致性。
