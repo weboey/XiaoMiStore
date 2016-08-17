@@ -2,18 +2,18 @@
   "products":[
     {"productId":1,"name":"小米Max","price":"1499","img":"max","number":15,"fl_id":1},
     {"productId":2,"name":"小米手机5","price":"1999","img":"mi5","number":12,"fl_id":1},
-    {"productId":3,"name":"小米手机4c","price":"1099","img":"mi4c","number":11,"fl_id":1},
-    {"productId":4,"name":"红米Note 3","price":"1099","img":"mi4c","number":11,"fl_id":2},
-    {"productId":5,"name":"红米手机3S","price":"1099","img":"mi4c","number":11,"fl_id":2},
-    {"productId":6,"name":"红米手机3","price":"1099","img":"mi4c","number":11,"fl_id":2},
+    {"productId":3,"name":"小米手机4c","price":"1699","img":"mi4c","number":161,"fl_id":1},
+    {"productId":4,"name":"红米Note 3","price":"1099","img":"mi4c","number":151,"fl_id":2},
+    {"productId":5,"name":"红米手机3S","price":"1099","img":"mi4c","number":81,"fl_id":2},
+    {"productId":6,"name":"红米手机3","price":"1099","img":"mi4c","number":771,"fl_id":2},
     {"productId":7,"name":"小米平板2 16GB","price":"1099","img":"mi4c","number":11,"fl_id":3},
-    {"productId":8,"name":"小米平板2 64GB","price":"1099","img":"mi4c","number":11,"fl_id":3},
+    {"productId":8,"name":"小米平板2 64GB","price":"1099","img":"mi4c","number":177,"fl_id":3},
     {"productId":9,"name":"小米盒子3","price":"1099","img":"mi4c","number":11,"fl_id":5},
     {"productId":10,"name":"小米电视3S 43英寸","price":"1299","img":"mipad2-64","number":16,"fl_id":4},
     {"productId":11,"name":"九号平衡车","price":"1299","img":"mipad2-64","number":16,"fl_id":7},
     {"productId":12,"name":"小米空气净化器 2","price":"699","img":"mipad2-64","number":16,"fl_id":7},
-    {"productId":13,"name":"小米手机4","price":"1799","img":"mi4c","number":31,"fl_id":1},
-    {"productId":14,"name":"小米Note","price":"2799","img":"mi4c","number":91,"fl_id":1}
+    {"productId":13,"name":"小米手机4","price":"1199","img":"mi4c","number":21,"fl_id":1},
+    {"productId":14,"name":"小米Note","price":"2899","img":"mi4c","number":91,"fl_id":1}
   ],
   "color_base":[
     {"colorId": 1, "name": "金色", "p_id": "1,2,3,4,5,6","b_id":"5,6","img":"jin"},
@@ -21,24 +21,25 @@
     {"colorId": 3, "name": "深灰", "p_id": "1,2","b_id":"5,6","img":"hei"}
   ],
   "color_info":[
-    {"colorId": 1, "name": "金色", "p_id": "1,2,3,4,5,6","b_id":"5,6","img":"jin"},
-    {"colorId": 2, "name": "银白", "p_id": "1,2,3,4,5","b_id":"5,6","img":"yin"},
-    {"colorId": 3, "name": "深灰", "p_id": "1,2","b_id":"5,6","img":"hei"},
-    {"colorId": 4, "name": "黑色 3D陶瓷机身", "p_id": "1,2,3,4,5,6","b_id":"7","img":"zi-webfile"},
-    {"colorId": 5, "name": "白色 3D陶瓷机身", "p_id": "1,2,3,4,5","b_id":"7","img":"zi-webfile"},
-    {"colorId": 6, "name": "白色 3D玻璃机身", "p_id": "1,2","b_id":"7","img":"zi-webfile"}
+    {"colorId": 1, "name": "金色", "p_id": ",1,2,3,4,5,6,7,8,9,10,11,12,13,14,","b_id":",2,3,4,5,6,7,9,","img":"jin"},
+    {"colorId": 2, "name": "银白", "p_id": ",1,2,3,4,5,6,7,8,9,10,11,12,13,14,","b_id":",2,3,4,5,6,7,9,","img":"yin"},
+    {"colorId": 3, "name": "深灰", "p_id": ",1,2,3,4,5,6,7,8,9,10,11,12,13,14,","b_id":",2,3,4,5,6,7,9,","img":"hei"},
+    {"colorId": 4, "name": "黑色 3D陶瓷机身", "p_id": ",1,2,3,4,5,6,","b_id":",8,","img":"zi"},
+    {"colorId": 5, "name": "白色 3D陶瓷机身", "p_id": ",1,2,3,4,5,","b_id":",8,","img":"zi"},
+    {"colorId": 6, "name": "白色 3D玻璃机身", "p_id": ",1,2,","b_id":",8,","img":"zi"}
   ],
   "versions_info":[
-    {"versionId": 1, "name": "全网通 2GB内存＋16GB容量", "p_id": "6","price":100,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
-    {"versionId": 2, "name": "全网通 3GB内存＋32GB容量 指纹识别", "p_id": "6","price":200},
-    {"versionId": 3, "name": "全网通 3GB内存+32GB容量", "p_id": "1","price":300},
-    {"versionId": 4, "name": "全网通 3GB内存+64GB容量", "p_id": "1","price":400},
-    {"versionId": 5, "name": "标准版", "p_id": "2","price":2100,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
-    {"versionId": 6, "name": "高配版", "p_id": "2","price":2200,"description":"高通骁龙820处理器 最高主频 2.15GHz，3GB内存，64GB容量，全网通3.0"},
-    {"versionId": 7, "name": "尊享版", "p_id": "2","price":2300,"description":"高通骁龙820处理器 最高主频 2.15GHz，4GB内存，128GB容量，全网通3.0"},
-    {"versionId": 8, "name": "标准版全网通 2GB内存＋16GB容量", "p_id": "4","price":400},
-    {"versionId": 9, "name": "标准版 2GB内存+16GB容量", "p_id": "5","price":600},
-    {"versionId": 10, "name": "高配版 3GB内存+32GB容量", "p_id": "5","price":1900}
+    {"versionId": 1, "name": "全网通 2GB内存＋16GB容量", "p_id": "0","price":100,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
+    {"versionId": 2, "name": "全网通 3GB内存＋32GB容量 指纹识别", "p_id": "0","price":200},
+    {"versionId": 3, "name": "全网通 3GB内存+32GB容量", "p_id": ",1,3,6,7,8,9,13,14,","price":300,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
+    {"versionId": 4, "name": "全网通 4GB内存+64GB容量 指纹识别", "p_id": ",1,3,4,6,7,8,9,13,14,","price":400,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
+    {"versionId": 5, "name": "全网通 6GB内存+128GB容量 指纹识别", "p_id": ",1,3,4,6,7,8,9,13,14,","price":300,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
+    {"versionId": 6, "name": "标准版", "p_id": "2","price":2100,"description":"高通骁龙820处理器 最高主频 1.8GHz，3GB内存，32GB容量，全网通3.0"},
+    {"versionId": 7, "name": "高配版", "p_id": "2","price":2200,"description":"高通骁龙820处理器 最高主频 2.15GHz，3GB内存，64GB容量，全网通3.0"},
+    {"versionId": 8, "name": "尊享版", "p_id": "2","price":2300,"description":"高通骁龙820处理器 最高主频 2.15GHz，4GB内存，128GB容量，全网通3.0"},
+    {"versionId": 9, "name": "标准版全网通 2GB内存＋16GB容量", "p_id": "4","price":400},
+    {"versionId": 10, "name": "标准版 2GB内存+16GB容量", "p_id": "5","price":600},
+    {"versionId": 11, "name": "高配版 3GB内存+32GB容量", "p_id": "5","price":1900}
   ],
   "detail_info":[
     {"detailId":1,"name":"概述","productIds":"2"},

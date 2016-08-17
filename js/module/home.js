@@ -100,7 +100,10 @@ angular.module('home', ['ui.router'])
                 .state("home.search",{ //搜索产品信息
                     url:'/search/:searchKey',
                     templateUrl: 'view/page/home.search.html',
-                    controller:function($scope,$stateParams){
+                    controller:function($scope,$stateParams,productsResolve,util){
+                        //TODO:搜索功能没有实现，暂时返回所有的产品
+                        //$scope.searchResultList=util.queryArrByField(productsResolve.products,$stateParams.searchKey,"name");
+                        $scope.searchResultList = productsResolve.products;
                     },
                     ncyBreadcrumb:{
                         label:"全部结果",

@@ -19,8 +19,6 @@ angular.module("focusImgMd", [])
             },
             scope: {imgItems: '=', title: "@?"},
             link: function (scope, element, attrs) {
-                console.log(scope.imgItems);
-
                 scope.imgIndex = 0;
                 var bannerWidth = element[0].querySelector('#focusImg').parentNode.clientWidth;
                 var focusImgWidth = element[0].querySelector('#focusImg').clientWidth;
@@ -49,10 +47,8 @@ angular.module("focusImgMd", [])
                     scope.imgIndex = index;
                     animation(index);
                 }
-
                 var imgSize = 5;
                 scope.imgTotalPage = scope.imgItems.length/imgSize-1;
-                console.log(scope.imgTotalPage);
             }
         }
     }

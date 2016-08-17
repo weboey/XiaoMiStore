@@ -17,13 +17,10 @@ angular.module("goodsFilterMd", [])
                 filterContents: "="
             },
             link: function (scope, element, attrs) {
-                console.log(scope.filterTypes);
-                console.log(scope.filterContents);
                 var filter = {
                     arr: []
                 }
                 scope.userFilter = function (itemContent) {
-                    console.log(itemContent);
                     filter.arr.push(itemContent);
                 };
             }

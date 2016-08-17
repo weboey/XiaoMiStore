@@ -78,10 +78,35 @@
     background: #fff;
     -webkit-transition: -webkit-box-shadow .5s linear;
     transition: box-shadow .5s linear;
+    overflow: hidden;
 }
 .search_goods_item:hover{
     webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.search_goods_item .small_img img{
+    width: 34px;
+    height: 34px;
+    padding: 2px 0;
+    border: 1px solid #e0e0e0;
+}
+.search_goods_item img{
+    width: 160px;
+    height: 140px;
+    /* transform:scale(2,2);*/
+}
+.search_goods_item a{
+    display: block;
+    margin: 30px 0 10px 0;
+    cursor: pointer;
+}
+.search_goods_item p{
+    margin-bottom:20px;
+}
+.search_goods_item .icon{
+    position: absolute;
+    top:-8px;
+    opacity: 0;
 }
 
 /*喜欢，收藏，加入购物车*/

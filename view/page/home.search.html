@@ -22,10 +22,19 @@
             </ul>
         </div>
         <div class="search_goods_list">
-            <div class="search_goods_item" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+            <div class="search_goods_item" ng-repeat="product in searchResultList">
                 <div class="actions clearfix">
-                    <a class="btn_like J_likeGoods"><i class="iconfont"></i> <span>喜欢</span></a>
-                    <a class="btn_buy btn-buy-detail J_buyGoods"><span>加入购物车</span> <i class="iconfont"></i></a>
+                    <a class="btn_like icon"><span>喜欢</span></a>
+                    <a class="btn_buy btn-buy-detail icon" ui-sref="buyNow({productId:product.productId})"><span>立即购买</span></a>
+                </div>
+                <img ng-src="resource/img/nav/{{product.img}}.jpg" alt="">
+                <a ui-sref="#">{{product.name}}</a>
+                <p class="price">{{product.price}}</p>
+                <div class="small_img">
+                    <img ng-src="resource/img/nav/{{product.img}}.jpg" alt="">
+                    <img ng-src="resource/img/nav/{{product.img}}.jpg" alt="">
+                    <img ng-src="resource/img/nav/{{product.img}}.jpg" alt="">
+                    <img ng-src="resource/img/nav/{{product.img}}.jpg" alt="">
                 </div>
             </div>
         </div>

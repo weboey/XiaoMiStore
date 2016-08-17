@@ -25,13 +25,11 @@ angular.module("checkboxMd", [])
                 this.groups = [];
                 // 注意this不是指scope对象，仅仅是当前函数对象,所以下面绑定在this的函数在视图中无效
                 // console.log(this);
-                this.selectAllCheckBox = function(){
-                    angular.forEach(this.groups,function(){
-
-                    })
-                }
+                //this.selectAllCheckBox = function(){
+                //    angular.forEach(this.groups,function(){
+                //    })
+               // }
                 this.changeChecked = function(){
-                    console.log(checkBoxService);
                     checkBoxService.selectAllCheckBox();
                 }
             },
