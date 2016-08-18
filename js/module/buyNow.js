@@ -53,20 +53,22 @@ angular.module('buyNow', ['ui.router','cartMd'])
                                     return $scope.userSelectArr[--userSelectIndex] === item;
                                 };
 
-                                //获取我的购物车对象
-                                $scope.myCart = cartService.myCart;
                                 //下一步
                                 $scope.buyNextStep = function(buyProduct){
                                     if($rootScope.user==null){
                                         alert("请先登录再购买!");
                                         return;
                                     }
+                                    //获取我的购物车对象
+                                    if($scope.myCart==null)
+                                    {
+                                        $scope.myCart =cartService.getInstance();
+                                    }
                                     //如果没有选择版本和颜色则直接返回
                                     if (!($scope.userSelectArr.length && $scope.userSelectArr.length==2)) {
                                           return;
                                     }
                                     //拼接用户选择的产品版本，颜色
-                                    buyProduct.name = "";
                                     angular.forEach($scope.userSelectArr,function(userSelectItem){
                                        buyProduct.name+=" "+userSelectItem.name;
                                     })

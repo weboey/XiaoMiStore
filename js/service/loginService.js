@@ -3,7 +3,7 @@
  */
 
 angular.module("loginMd", ["swxLocalStorage"])
-    .factory("loginService", function ($localStorage) {
+    .factory("loginService", function ($localStorage,cartService) {
         return {
             user: {},
             //登录
@@ -16,8 +16,10 @@ angular.module("loginMd", ["swxLocalStorage"])
                 }
                 $localStorage.put("curUser", oldUser);
                 this.user = oldUser;
+                //登陆后根据用户名创建我的购物车
+                cartService.createMyCart(this.user.name);
+                //返回登陆用户
                 return this.user;
-
             },
             //注册
             register: function (newUser) {
@@ -33,7 +35,10 @@ angular.module("loginMd", ["swxLocalStorage"])
             isLogin: function () {
                 var oldUser = $localStorage.get("curUser");
                 if (oldUser !== null) {
-                    return oldUser;
+                    //登陆后根据用户名创建我的购物车
+                    this.user = oldUser;
+                    cartService.createMyCart(this.user);
+                    return this.user;
                 }
                 return null;
             },

@@ -3,7 +3,7 @@
  */
 
 angular.module("cartMd", ["swxLocalStorage","utilMd"])
-    .factory("cartService", function ($localStorage, util,$rootScope) {
+    .factory("cartService", function ($localStorage, util) {
         function myCart(cartName) {
             this.cartName = cartName;
             this.items = [];
@@ -82,15 +82,26 @@ angular.module("cartMd", ["swxLocalStorage","utilMd"])
             this.items.splice(index,1);
             this.saveItems();
         }
-        // 创建我的购物车
-        var myCartObj;
-        if($rootScope.user!=null){//用户已经登录
-            myCartObj = new myCart($rootScope.user.name);
-        }
 
+        // 创建我的购物车
+        //bug 不能在此处根据用户登录的用户名来创建我的购物车，因为服务在被注入时就已经被实例化了，
+        // 导致用户登录后，加入购物车时出现错误 TypeError: Cannot read property 'addProductInCart' of undefined
+        //var myCartObj;
+        //if($rootScope.user!=null){//用户已经登录
+        //    myCartObj = new myCart($rootScope.user.name);
+        //}
         // 服务返回我的购物车实例对象
-        return {
-            myCart: myCartObj
+        //return {
+        //    myCart: myCartObj
+        //};
+        return { // repair bug
+            myCart:null,
+            createMyCart: function(userName){
+                this.myCart = new myCart(userName);
+            },
+            getInstance:function(){
+                return this.myCart;
+            }
         };
     })
 

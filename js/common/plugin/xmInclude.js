@@ -4,7 +4,7 @@
 ///*方法3：指令结合使用ng-include指令可以解决共同模版中仍然存在一差异的dom元素*/
 //这三种方法实质上都是利用ajax来加载模板。使用ajax来实现页面分解这样的功能，相比传统的使用后台动态脚本语言的方案，必然会带来额外的开销。
 angular.module("xmIncludeMd",[])
-    .directive('xmInclude', function factory() {
+    .directive('xmInclude', function factory(loginService,$rootScope) {
         var directiveDefinitionObject = {
             restrict: "AE",
             replace: "true",
@@ -23,6 +23,11 @@ angular.module("xmIncludeMd",[])
                     // scope.getContentUrl = function () {
                     //     return "view/common/" + attr.src + ".html"
                     // }
+                    //TODO:独立的作用域原型上没有继承rootScope的属性，导致模板上用户退出登录函数失效，暂时这样解决
+                    scope.outLogin =function(){
+                        loginService.outLogin();
+                        $rootScope.user = null;
+                    }
                 }
             }
         };
