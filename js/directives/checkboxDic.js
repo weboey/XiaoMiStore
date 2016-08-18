@@ -50,17 +50,14 @@ angular.module("checkboxMd", [])
         var directiveDefinitionObject = {
             restrict:"AE",
             replace:true,
-            template:"<div><i class='radio-icon' ng-class='{checked:isChecked}' ng-click='changeChecked()'></i></div>",
+            template:"<div><i class='radio-icon' ng-class='{checked:bindData.isChecked}' ng-click='changeChecked()'></i></div>",
             scope:{
                 bindData:"=?"
             },
             //require:'^checkBox',
             compile: function compile(tElement, tAttrs, transclude) {
                 return function (scope, element, attrs) {
-                    scope.isChecked = false;
                     scope.changeChecked = function(){
-                        scope.isChecked = !scope.isChecked;
-                        scope.bindData.isChecked = scope.isChecked;
                     }
                     checkBoxService.groups.push(scope);
                 }
