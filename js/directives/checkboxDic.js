@@ -58,6 +58,7 @@ angular.module("checkboxMd", [])
             compile: function compile(tElement, tAttrs, transclude) {
                 return function (scope, element, attrs) {
                     scope.changeChecked = function(){
+                        scope.bindData.isChecked = !scope.bindData.isChecked;
                     }
                     checkBoxService.groups.push(scope);
                 }
