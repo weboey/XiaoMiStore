@@ -9,9 +9,11 @@ angular.module('cart', ['ui.router','cartMd'])
                 .state("cart", {
                     url: '/cart',
                     templateUrl: 'view/cart.html',
-                    controller:function($scope,cartService){
+                    controller:function($scope,cartService,$rootScope){
                         //调用服务获取我的购物车对象
-                        $scope.cart = cartService.myCart;
+                        if($rootScope.user!=null){
+                            $scope.cart = cartService.myCart;
+                        }
                     },
                     ncyBreadcrumb:{
                         label:"我的购物车",

@@ -21,7 +21,6 @@ angular.module('login', ['ui.router'])
                         $scope.smOuter = function(){
                             $scope.loginState = true;
                         }
-
                         $scope.subLogin = function(){
                             $rootScope.user = loginService.login($scope.user);
                             if($rootScope.user!=null)
@@ -31,7 +30,7 @@ angular.module('login', ['ui.router'])
                         }
                     },
                     ncyBreadcrumb:{
-                        label:"��¼",
+                        label:"登录",
                         parent:"home.main"
                     }
 

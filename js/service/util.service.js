@@ -38,7 +38,7 @@ angular.module("utilMd", [])
                 })
                 return obj;
             },
-            //通过参数查询某个产品,id为查询的key，field为查询的表字段名称
+            //通过参数查询某个产品,key为查询值，field为查询的表字段名称
             queryItemByField: function (arr, key, field) {
                 var obj = null;
                 angular.forEach(arr, function (item, index) {
@@ -48,7 +48,7 @@ angular.module("utilMd", [])
                 })
                 return obj;
             },
-            //通过参数字段查询某个产品集合,id为查询的key，field为查询的表字段名称
+            //通过参数字段查询某个产品集合,key为查询值，field为查询的表字段名称
             queryArrByField: function (arr, key, field) {
                 var tmpArr = [];
                 angular.forEach(arr, function (item, index) {

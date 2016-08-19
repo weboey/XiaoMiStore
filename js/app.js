@@ -40,7 +40,6 @@ xmStoreApp
             loginService.outLogin();
             $rootScope.user = null;
         }
-        $rootScope.userUnLogin = false;
 
         //调用服务获取主页需要显示的焦点图
         httpService.get('json/tsconfig.json').then(function (data) {

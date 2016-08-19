@@ -12,7 +12,7 @@ angular.module("httpMd",[])
                         defer.resolve(data); //声明执行成功
                     })
                     .error(function(data,status,headers,config){
-                        defer.reject(); //声明执行失败，此处可以处理请求失败后的逻辑
+                        defer.reject(); //声明执行失败，此处可以处理请求失败后的提示或其它业务逻辑
                     });
                 return defer.promise; //返回承诺，返回获取数据的API
             }

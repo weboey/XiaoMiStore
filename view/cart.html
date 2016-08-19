@@ -2,15 +2,14 @@
 <div xm-include src="view/common/header.html" title="我的购物车" user="user"></div>
 <div class="cart_main">
     <div class="container">
-        <div class="cart-empty" ng-if="!cart.items.length">
+        <div class="cart-empty" ng-if="!cart.items.length || user==null">
             <h2>您的购物车还是空的！</h2>
-
-            <p ng-if="userUnLogin">登录后将显示您之前加入的商品</p>
+            <p ng-if="user==null">登录后将显示您之前加入的商品</p>
             <button ng-if="user==null" ui-sref="login" class="btn btn-primary-fill">立即登录</button>
             <button class="btn btn-primary-fill btn_shopping" ui-sref="home.main">马上去购物</button>
         </div>
 
-        <div class="cart-content" ng-if="cart.items.length">
+        <div class="cart-content" ng-if="cart.items.length && user!=null">
             <table class="cart-tb cart-product">
                 <thead  class="cart-tb-head">
                     <tr>
